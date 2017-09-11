@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="pwd" value="a11111"/>
+  <parameter name="username" value="爱学派D"/>
+  <listeners>
+    <listener class-name="util.AddTestResultToMySQL"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="pwd" value="a11111"/>
+    <parameter name="username" value="爱学派D"/>
+    <classes>
+      <class name="iosTest.LoginTest1">
+        <methods>
+          <include name="loginFaildTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- iosTest.LoginTest1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
